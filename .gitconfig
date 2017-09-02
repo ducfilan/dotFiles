@@ -184,7 +184,7 @@
 
 	insteadOf = "gist:"
 [gpg]
-	program = /usr/local/bin/gpg2
+	program = /usr/local/bin/gpg1
 [user]
 	email = ducfilan@gmail.com
 	name = Duc Filan
