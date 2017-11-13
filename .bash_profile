@@ -46,3 +46,9 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# added by Anaconda3 5.0.0 installer
+export PATH="/Users/duchoang/anaconda3/bin:$PATH"
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
