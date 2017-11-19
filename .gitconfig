@@ -184,8 +184,8 @@
 
 	insteadOf = "gist:"
 [gpg]
-	program = /usr/local/bin/gpg1
+	program = gpg
 [user]
 	email = ducfilan@gmail.com
 	name = Duc Filan
-	signingkey = 459F2707B069A034
+	signingkey = B0D2465E6963F3C741B9879A459F2707B069A034
