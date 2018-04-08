@@ -52,3 +52,5 @@ export PATH="/Users/duchoang/anaconda3/bin:$PATH"
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
