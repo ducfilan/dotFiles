@@ -11,10 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export PATH="$PATH":"$HOME/mongodb-macos-x86_64-enterprise-4.2.1/bin"
 
-
-export PATH="$PATH":"$HOME/.npm-global/bin"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+source ~/.ducrc
