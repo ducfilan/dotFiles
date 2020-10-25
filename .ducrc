@@ -1,0 +1,22 @@
+#!/bin/bash
+
+function gitenv(){
+    command=$1
+    if [ "$command" = "l" ]; then
+        echo "$(ls -d ~/.ssh/*/ | xargs -n 1 basename)"
+    elif [ "$command" = "s" ]; then
+        env=${2:-duc}
+        yes | cp ~/.ssh/$env/id_rsa ~/.ssh/$env/id_rsa.pub ~/.ssh/$env/known_hosts ~/.ssh > /dev/null 2>&1
+        
+        read -r name < ~/.ssh/$env/info
+        email=$(sed -n '2p' ~/.ssh/$env/info)
+        git config --global user.name "$name"
+        git config --global user.email "$email"
+        git config -l | grep mail
+    else
+        echo "Invalid command! Valid commands are: \
+1. l (list environments) \
+2. s (swich environments)"
+    fi
+}
+
